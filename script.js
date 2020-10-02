@@ -53,6 +53,15 @@ for (let i = 0; i < brickRowCount; i++){
 //Draw ball on canvas
 function drawPaddle(){
     ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
+    ctx.fillStyle = '#0095dd';
+    ctx.fill();
+    ctx.closePath();
+}
+
+//Draw paddle on canvss
+function drawPaddle(){
+    ctx.beginPath();
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
     ctx.fillStyle = '#0095dd';
     ctx.fill();
