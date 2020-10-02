@@ -59,11 +59,17 @@ function drawPaddle(){
     ctx.closePath();
 }
 
-//Draw paddle on canvss
+//Draw paddle on canvas
 function drawPaddle(){
     ctx.beginPath();
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
     ctx.fillStyle = '#0095dd';
     ctx.fill();
     ctx.closePath();
+}
+
+//Draw score on canvas
+function drawScore(){
+    ctx.font = '20px Arial';
+    ctx.fillText(`Score: ${score}`, canvas.width - 100, 30)
 }
