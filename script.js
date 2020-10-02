@@ -168,3 +168,14 @@ function moveBall() {
       column.forEach(brick => (brick.visible = true));
     })
   }
+
+  //Draw everything
+  function draw() {
+      //clear canvas
+      ctx.clearReact(0, 0, canvas.width, canvas.height)
+
+      drawBall();
+      drawPaddle();
+      drawScore();
+      drawBricks();
+  }
